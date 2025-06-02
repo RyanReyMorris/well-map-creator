@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формирование групп взаимодействующих скважин</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+    </style>
+</head>
+<body>
+<header>
+    <h1>Формирование групп взаимодействующих скважин</h1>
+</header>
+<main>
+    <div style="display: flex">
+        <button id="result_map" style="background: red" disabled>Выгрузить данные в XLSX</button>
+        <label for="fileInput" class="btn">Загрузить данные</label>
+        <input type="file" style="visibility:hidden;" id="fileInput" accept=".xlsx">
+    </div>
+    <section id="prod_wells_section">
+        <h2>Диаграмма Вороного по всему фонду скважин</h2>
+        <canvas id="prod_wells" width="1920" height="1080"></canvas>
+        <div class="controls">
+            <button class="btn zoomInProd">Увеличить</button>
+            <button class="btn zoomOutProd">Уменьшить</button>
+        </div>
+    </section>
+    <section id="inj_wells_section">
+        <h2>Диаграмма Вороного по нагнетательному фонду скважин</h2>
+        <canvas id="inj_wells" width="1920" height="1080"></canvas>
+        <div class="controls">
+            <button class="btn zoomInInj">Увеличить</button>
+            <button class="btn zoomOutInj">Уменьшить</button>
+        </div>
+    </section>
+    <section id="result_wells_section">
+        <h2>Результирующая карта наложения</h2>
+        <canvas id="result_wells" width="1920" height="1080"></canvas>
+        <div class="controls">
+            <button class="btn zoomInResult">Увеличить</button>
+            <button class="btn zoomOutResult">Уменьшить</button>
+        </div>
+    </section>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+<script src="components/xlsx.js"></script>
+<script src="scripts/FileSaver.min.js"></script>
+<script src="components/voronoy.js"></script>
+<script src="components/geometry-math.js"></script>
+<script src="components/draw-functions.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
