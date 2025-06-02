@@ -1,4 +1,10 @@
-# Oil wells map creator
+<div align="center">
+  <img alt="Logo" src="https://raw.githubusercontent.com/ryanreymorris/portfolio/master/public/logo.png" width="100" />
+</div>
+<h1 align="center">
+  Oil wells map creator
+</h1>
+
 
 ## Overview
 Academic project for creating oil wells interaction map.
